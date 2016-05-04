@@ -1,0 +1,40 @@
+;; //////////////////////////////////////////////////////////////////
+;; W40k.module
+;;
+;; (c) 2012 Traduções de Jogos,ltd.
+;; 
+
+[global]
+
+UIName = $503527
+Description = Translation Games verify.
+DllName = W40kMod
+ModFolder = W40k
+ModVersion = 1.0
+TextureFE = 
+TextureIcon =
+
+;; //////////////////////////////////////////////////////////////////
+;; List of folders to map for this MOD 
+;; order is important - the first Archives registered will be scanned for files first
+DataFolder.1 = %LOCALE%\Data
+DataFolder.2 = Data
+DataFolder.3 = Data_Shared_Textures\%TEXTURE-LEVEL%
+DataFolder.4 = Data_Sound\%SOUND-LEVEL%
+DataFolder.5 = Data_Whm\%MODEL-LEVEL%
+
+;; //////////////////////////////////////////////////////////////////
+;; List of archives to load for this MOD 
+;; order is important - the first Archives registered will be scanned for files first
+ArchiveFile.1 = %LOCALE%\W40kDataLoc
+ArchiveFile.2 = %LOCALE%\W40kDataKeys
+ArchiveFile.3 = W40kData
+ArchiveFile.4 = W40kDataGOTY
+ArchiveFile.5 = W40kData-SharedTextures-%TEXTURE-LEVEL%
+ArchiveFile.6 = %LOCALE%\W40kData-Sound-Speech
+ArchiveFile.7 = W40kData-Sound-%SOUND-LEVEL%
+ArchiveFile.8 = W40kData-Whm-%MODEL-LEVEL%
+
+;; //////////////////////////////////////////////////////////////////
+;; List of MODs that this MOD requires to work
+;; RequiredMod.1 = 

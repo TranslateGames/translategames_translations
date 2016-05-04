@@ -1,0 +1,108 @@
+"1" "Adicionar Zbot"
+{
+	"1" "Um para quaquer lado"		"bot_add"
+	"2" "Um para os Terroristas"		"bot_add_t"
+	"3" "Um para os Contra-terroristas"	"bot_add_ct"
+	"4" "Times de 2 Contra 2"		"bot_quota 3"
+	"5" "Times de 4 Contra 4"		"bot_quota 7"
+	"6" "Times de 6 Contra 6"		"bot_quota 11"
+	"7" "Times de 8 Contra 8"          	"bot_quota 15"
+	"8" "Times de 10 Contra 10"		"bot_quota 19"
+	"9" "Times de 12 Contra 12(lento)"	"bot_quota 23"
+}
+"2" "Opcoes do zbot"
+{
+	"1" "Finalizar Round"	"bot_kill"
+	"2" "Retirar zbots"	"bot_kick"
+	"3" "Dificudade"
+	{
+		"1" "Facil"	"bot_difficulty 0"
+		"2" "Normal"	"bot_difficulty 1"
+		"3" "Dificil"	"bot_difficulty 2"
+		"4" "Experte"	"bot_difficulty 3"
+	}
+	"4" "Desbloquear todas as Armas"	"bot_all_weapons" 
+	"5" "Proibir armas"
+	{
+		"1" "Proibir Pistolas"		"bot_allow_pistols 0"
+		"2" "Proibir Escopestas"	"bot_allow_shotguns 0"
+		"3" "Proibir Sub-Metralhadoras"	"bot_allow_sub_machine_guns 0"
+		"4" "Proibir Rifles"		"bot_allow_rifles 0"
+		"5" "Proibir Metralhadoras"	"bot_allow_machine_guns 0"
+		"6" "Proibir Granadas"		"bot_allow_grenades 0"
+		"7" "Proibir Snipers"		"bot_allow_snipers 0"
+		"8" "Proibir Escudos"		"bot_allow_shield 0"
+	}
+	"6" "Selecionar Somente"
+	{
+		"1" "Somente Facas"	"bot_knives_only"
+		"2" "Somente Pistolas"	"bot_pistols_only"
+		"3" "Somente Snipers"	"bot_snipers_only"
+	}
+}
+
+"3" "Opcoes do jogo"
+{
+	"1" "Recaregar o Mapa"			"reload"
+	"2" "Permitir pausas de jogo"		"pausable 1"
+	"3" "Trocar cor da Mira"	"adjust_crosshair"
+	"4" "Ajustes da Mira"
+	{
+	"1" "Mira Dinamica(melhor)"	"cl_dynamiccrosshair 0"
+	"2" "Mira Normal"		"cl_dynamiccrosshair 1"
+	"3" "Mira Menor"		"cl_lw 1"
+	"4" "Mira Maior(apos sair do jogo)""cl_lw 0"
+	}
+	"5" "Usar mao" 			
+	{
+		"1" "Direita"		"cl_righthand 1"
+		"2" "Esquerda"		"cl_righthand 0"
+	}
+}
+"4" "Outros Ajustes"
+{
+	"1" "Sensibilidade do Mouse"
+	{
+	 "1" "Velocidade 1.0"	"sensitivity 1.0"
+	 "2" "Velocidade 2.0"	"sensitivity 2.0"
+	 "3" "Velocidade 3.0(original)"	"sensitivity 3.0"
+	 "4" "Velocidade 4.0"	"sensitivity 4.0"
+	 "5" "Velocidade 5.0"	"sensitivity 5.0"
+	 "6" "Velocidade 6.0"	"sensitivity 6.0"
+	 "7" "Velocidade 8.0"	"sensitivity 8.0"
+	 "8" "Velocidade 10.0"	"sensitivity 10.0"
+	 "9" "Velocidade 12.0"	"sensitivity 12.0"
+	}
+	//"2" "Trocar nomes"
+	//{
+	//"1" "LEO X"		"name LEO_X"
+	//"2" "Andersom"		"name Andersom"
+	//"3" "Bruno"		"name Bruno"
+	//}
+	"3" "Ativar Lanterna" 
+	{
+	"1" "Sim"	"mp_flashlight 1"
+	"2" "Nao"	"mp_flashlight 0"
+	}
+	"4" "Som de passos" 
+	{
+	"1" "Sim"	"mp_footsteps 1"
+	"2" "Nao"	"mp_footsteps 0"
+	}
+	"5" "Limitar flames"
+	{
+		"1" "30 por segundo"		"fps_max 30"
+		"2" "60 por segundo"		"fps_max 82"
+	}
+	"6" "Mostrar quadros por segundo"
+	{
+		"1" "Sim"	"cl_showfps 1"
+		"2" "Nao"	"cl_showfps 0"
+	}
+}
+
+"0" "Sair do Jogo" 
+{
+	"1" "Nao"	"  "
+	"2" "Sim"	"EXIT"
+}

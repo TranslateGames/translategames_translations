@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Cstrike - Traduções de Jogos™</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>PRE {
+	COLOR: #ffb000; FONT-FAMILY: Tahoma,Arial
+}
+BODY {
+	MARGIN-TOP: 2px; BACKGROUND: #000000; MARGIN-LEFT: 5px
+}
+A {
+	TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #ffffff
+}
+A:visited {
+	COLOR: #ffffff
+}
+A:active {
+	COLOR: #ffffff
+}
+A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+</STYLE>
+
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY scroll=yes><PRE><center><b>Você está jogando <IMG height=17 src="gfx\vgui\CS-CZ_BR.gif" width=122 border=0></A>, Clique <A href="update.htm">aqui</A> e atualize a sua Tradução, 
+Tradução 2.20 BETA por: »»Victor®«« (<A href="mailto:victoralves05@gmail.com">victoralves05@gmail.com</a>)</b>
+<A href="http://translategames.tk"><IMG height=105 src="gfx\vgui\CS-CZ_BR.bmp" width=171 border=0></A><A href="http://runescapepirata3.blogspot.com.br"><IMG height=105 src="gfx\vgui\logo_ipscenter.bmp" width=171 border=0></A></A>
+<b><font size="3">Para mais informações sobre a Tradução clique <A href="motd_BR.htm">aqui</A> </font></b></center>
+</PRE></BODY></HTML>

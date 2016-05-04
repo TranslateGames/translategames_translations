@@ -1,0 +1,140 @@
+BOT CONTROL  cl_showfps 1 flames p seg
+
+bot_add
+bot_add_t
+bot_add_ct
+
+Causas um bot a ser acrescentado ao jogo. "bot_add" acrescentarão um bot ao time especificado pelo cvar de "bot_join_team." "bot_add_t" e "bot_add_ct" força o bot sobre os times respectivos.
+
+bot_kill <nome, "tudo">
+Este comando ou leva o nome de um bot, ou a palavra chave "tudo" - causando todo o bots no jogo a ser matado.
+
+bot_kick <nome, "tudo">
+Este comando ou leva o nome de um bot, ou a palavra chave "tudo" - causando todo o bots no jogo a ser chutado.
+
+bot_knives_only
+bot_pistols_only
+bot_snipers_only
+bot_all_weapons
+
+Estes comandos são atalhos que fixaram o bot_allow_ * cvars adequadamente.
+
+
+BOT CONTROL
+bot_difficulty [0-3]
+Este cvar determina recentemente a dificuldade de tudo criou bots (bots existente reterão a dificuldade que fixa eles foram criados com). Zero = fácil, 1 = normal, 2 = duro, 3 = o perito. Dificuldade avalia mais alto que são reajustados 3 a 3.
+
+bot_quota <número mínimo de bots>
+Fixando este cvar a um valor de nonzero causarão o determinado número de bots ser mantido no jogo. Se um bot é chutado, um bot novo será somado para manter a cota. Incapacitar a cota, fixe para zerar.
+
+bot_prefix <fio>
+O determinado <fio> será anteposto todo subseqüentemente para somou nomes de bot. Isto é útil para "clã-etiquetar" bots.
+
+bot_join_team [ct, t, qualquer]
+Determina qual time unirão o bots.
+
+bot_join_after_player [0,1]
+Se nonzero, o bots esperarão unir o jogo até pelo menos um jogador humano uniu.
+
+bot_allow_pistols
+bot_allow_shotguns
+bot_allow_sub_machine_guns
+bot_allow_rifles
+bot_allow_machine_guns
+bot_allow_grenades
+bot_allow_snipers
+bot_allow_shield
+Tudo do cvars de "bot_allow" ou podem ser 0 ou 1. Se zero, o bots não comprarão ou usarão a determinada categoria de arma.
+
+bot_allow_rogues [0,1]
+Se nonzero, permite bots para "ir o velhaco" ocasionalmente. Bots de velhaco há pouco "corrido e atira", e responderá a todos os comandos de rádio com "Negativo."
+
+
+
+NAVEGAÇÃO MALHA EDITANDO
+Cada um dos comandos de bot_nav_ seguintes opera na malha de navegação, enquanto permitindo mão-afinação dos dados automaticamente instruídos. É recomendado que estes comandos sejam ligados a chaves para facilidade de uso enquanto editando.
+PRECAUÇÃO: Há nenhum "desfaça" operação. Economize freqüentemente sua malha de navegação.
+
+bot_nav_mark
+Marcas a área de nav atualmente selecionada para operações posteriores.
+
+bot_nav_delete
+Apaga a área de nav atualmente selecionada.
+
+bot_nav_split
+Divisões a área de nav atualmente selecionada em duas áreas de nav novas, ao longo da linha fendida branca.
+
+bot_nav_merge
+Funde a área de nav atualmente selecionada e uma área de nav previamente marcada em uma área de nav nova, única. O funda só acontecerá se as duas áreas forem o mesmo tamanho junto o funda linha.
+
+bot_nav_connect
+Cria uma UMA ligação de MODO do atualmente área marcada para a área atualmente selecionada, contando o bots eles podem caminhar DE a área marcada À área selecionada. Para a maioria das áreas, você quererá conectar as áreas em ambas as direções. Porém, para algum "salto abaixo" áreas, o bots podem mover um modo, mas não pode voltar o outro.
+
+bot_nav_disconnect
+Desconecta TODAS as conexões do atualmente área marcada para a área atualmente selecionada.
+
+bot_nav_begin_area
+bot_nav_end_area
+Estes dois comandos permitem a criação de áreas de nav novas. "bot_nav_begin_area" marca um canto da área. "bot_nav_end_area" marca o canto oposto da área e cria isto. Cancelar a operação, emita um comando de "bot_nav_begin_area" novamente.
+
+bot_nav_splice
+Cria uma área de nav nova entre o atualmente área marcada e a área atualmente selecionada, e bidirectionally conecta a área nova. Este comando é especialmente útil para criar áreas de nav se inclinadas.
+
+bot_nav_crouch
+Bandeiras a área atualmente selecionada como "abaixa", enquanto exigindo para bots abaixar (pato) mover por isto.
+
+bot_nav_jump
+Bandeiras a área atualmente selecionada como "salto." Esta é uma sugestão ao bots que eles deveriam saltar para atravessar esta área.
+
+PROCESSO DE MALHA DE NAVEGAÇÃO
+bot_nav_analyze
+Analise a malha de navegação para determinar Pontos de Aproximação e Manchas de Encontro. Isto pode levar vários minutos baseado no tamanho e complexidade do mapa.
+NOTA: Este comando exige para um bot estar no jogo. O procedimento indicado é economizar a malha, soma um bot, e depressa entra em bot_analyze.
+
+bot_nav_save
+Economiza a malha de navegação atual a disco. A malha de navegação ("nav" arquivam) é nomeado para corresponder ao arquivo de mapa atual automaticamente. Por exemplo, se o mapa for de_dust.bsp, o arquivo de nav será de_dust.nav.
+
+bot_nav_load
+Clareia a malha de navegação atual, e cargas isto de disco.
+
+
+NAV MESH QUE EDITA
+bot_nav_edit [0,1]
+Fixando este cvar a 1 permite mão-afinação da malha de navegação do bot. Uma vez edite modo foi ativado, o bot_nav_ * podem ser usados comandos.
+
+bot_nav_zdraw <valor de altura>
+Este valor determina como alto sobre o chão se enredam" puxar o "nav quando em nav edite modo. Se o terreno for muito irregular ou altamente se inclinado, pode ser útil para aumentar este valor a 10 ou 15. O valor de falta é 4.
+
+bot_quicksave [0,1]
+Se nonzero, a fase de análise de mapa aprender será saltada. Isto é útil quando iteratively que mão-afina arquivos de nav. Nota que withough esta análise, o bots não darão uma olhada corretamente ao redor do mundo.
+
+
+DEPURANDO
+bot_walk [0,1]
+Force todo o bots a caminhar (desaprove corrida).
+
+bot_stop [0,1]
+Se nonzero, todos o bots deixarão de mover e responder.
+
+bot_show_nav [0,1]
+Se nonzero, o nav se enredam próximo cada bot é tirado.
+
+bot_show_danger [0,1]
+Se nonzero, o "perigo" em cada área de nav é puxar como uma linha vertical. Linhas azuis representam perigo para CTs, e linhas vermelhas são perigo para Ts.
+
+bot_traceview <valor>
+Usado para depuração interna de navegação de bot.
+
+bot_debug <valor>
+Usado para depuração interna de comportamento de bot.
+
+
+MISC
+bot_about
+Exibições o número de versão de bot, e informação sobre o autor do bot.
+
+bot_goto_mark
+Causas um bot no mapa para mover ao centro do atualmente área marcada. Isto é útil para testar o walkability de porções específicas da malha de navegação.
+
+ 
+www.turtlerockstudios.com\csbot 

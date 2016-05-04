@@ -1,0 +1,5 @@
+map	2d	wos_pttm.png
+addr	clamp_to_edge	clamp_to_edge
+nomips
+nocompress
+

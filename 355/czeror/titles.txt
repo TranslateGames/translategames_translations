@@ -1,0 +1,78 @@
+//TITLES FOR HALF-LIFE
+// Position command $position x y 
+// x & y are from 0 to 1 to be screen resolution independent
+// -1 means center in each dimension
+// Effect command $effect <effect number>
+// effect 0 is fade in/fade out
+// effect 1 is flickery credits
+// effect 2 is write out (training room)
+// Text color r g b command $color
+// fadein time fadeout time / hold time
+// $fadein (message fade in time - per character in effect 2)
+// $fadeout (message fade out time)
+// $holdtime (stay on the screen for this long)
+
+
+//--------------------- WEAPON SWITCHES
+$position 0.5 0.8
+$effect 1
+$color 128 128 128
+$color2 0 0 0
+$fadein 0.0
+$fadeout 0.0
+$holdtime 1.5
+
+Switch_To_BurstFire
+{
+Mudou para modo de Fogo-bruto
+}
+
+Switch_To_SemiAuto
+{
+Mudou para modo semi-automatico
+}
+
+Switch_To_FullAuto
+{
+Mudou para modo automatico
+}
+
+//-------------------------------------------Mission Failure Entities
+$position -1 0.66
+$effect 0
+$color 128 128 128
+$color2 0 0 0
+$fadein 0.5
+$fadeout 0.5
+$holdtime 6
+
+GENERIC_FAIL
+{
+A MISSÃO FALHOU
+}
+
+// Game title
+// This is a placeholder to hold the effects controls for the "Half-Life" title
+$position -1 -1
+// Only effect 0 is supported for game title
+$effect 0
+// This is the final color
+$color 180 180 180
+// Not used color2
+$color2 0 0 0
+// This is the time it takes to fade in the title
+$fadein 1.0
+// How long to hold the message on the screen (after it scans out)
+$holdtime 3.0
+// How long it takes to fade out the message after holding
+$fadeout 1.5
+
+GAMETITLE
+{
+Counter-Strike: Condition Zero BR
+}
+
+GAMESAVED
+{
+#Valve_Game_Saved
+}

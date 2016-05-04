@@ -1,0 +1,36 @@
+[global]
+
+UIName = $1101900
+Description = Translation Games verify.
+DllName = WXPMod
+Playable = 1
+ModFolder = DXP2
+ModVersion = 1.0
+TextureFE = Art/UI/Textures/Title_winter_assault.tga
+TextureIcon =
+
+;; //////////////////////////////////////////////////////////////////
+;; List of folders to map for this MOD 
+;; order is important - the first Archives registered will be scanned for files first
+DataFolder.1 = %LOCALE%\Data
+DataFolder.2 = Data
+DataFolder.3 = Data_Shared_Textures\%TEXTURE-LEVEL%
+DataFolder.4 = Data_Sound\%SOUND-LEVEL%
+DataFolder.5 = Data_Music
+DataFolder.6 = Data_Whm\%MODEL-LEVEL%
+
+;; //////////////////////////////////////////////////////////////////
+;; List of archives to load for this MOD 
+;; order is important - the first Archives registered will be scanned for files first
+ArchiveFile.1 = %LOCALE%\DXP2DataLoc
+ArchiveFile.2 = %LOCALE%\DXP2DataKeys
+ArchiveFile.3 = DXP2Data
+ArchiveFile.4 = DXP2Data-SharedTextures-%TEXTURE-LEVEL%
+ArchiveFile.5 = %LOCALE%\DXP2Data-Sound-Speech
+ArchiveFile.6 = DXP2Data-Sound-%SOUND-LEVEL%
+ArchiveFile.7 = DXP2Data-Music
+ArchiveFile.8 = DXP2Data-Whm-%MODEL-LEVEL%
+
+;; //////////////////////////////////////////////////////////////////
+;; List of MODs that this MOD requires to work
+RequiredMod.1 = W40k

@@ -1,0 +1,1314 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// Todos os perfis começam com estes dados e escrevem elaboradamente o próprio
+//
+Default
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 75
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 0
+End
+
+//----------------------------------------------------------------------------
+
+//
+// Estes modelos herdam de Falta e anulam com os valores deles 
+// O nome do modelo define um tipo que é usado através de perfis de bot individuais 
+//
+
+// modelos de preferência de arma 
+Template Total
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = aug
+	WeaponPreference = awp
+	WeaponPreference = sg552
+	WeaponPreference = sg550
+	WeaponPreference = scout
+	WeaponPreference = p90
+	WeaponPreference = tmp
+	WeaponPreference = mac10		// no caso de escudo é desaprovada 
+	WeaponPreference = shield
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = m249
+End
+Template Rifle
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Punch
+	WeaponPreference = aug
+	WeaponPreference = sg552
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = sg550
+	WeaponPreference = g3sg1
+	WeaponPreference = scout
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Power
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Shotgun
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Shield
+	WeaponPreference = shield
+	WeaponPreference = m4a1			// in case shield is disallowed
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Spray
+	WeaponPreference = p90
+	WeaponPreference = tmp
+	WeaponPreference = mac10
+	WeaponPreference = mp5
+End
+
+
+// skill templates
+Template Elite
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.2
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 85
+End
+
+Template Expert
+	Skill = 90
+	Aggression = 90
+	ReactionTime = 0.2
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 88
+End
+
+Template VeryHard
+	Skill = 80
+	Aggression = 80
+	ReactionTime = 0.25
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 92
+End
+
+Template Hard
+	Skill = 75
+	Aggression = 75
+	ReactionTime = 0.25
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 94
+End
+
+Template Tough
+	Skill = 60
+	Aggression = 60
+	ReactionTime = 0.3		// 0.2 - 0.4
+	AttackDelay = 0.35		// 0.3 - 0.4
+	Cost = 2
+	Difficulty = NORMAL+HARD
+	VoicePitch = 96
+End
+
+Template Normal
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.4		// 0.2 - 0.4
+	AttackDelay = 0.7			// 0.3 - 0.4
+	Cost = 2
+	Difficulty = NORMAL
+End
+
+Template Fair
+	Skill = 25
+	Aggression = 30
+	ReactionTime = 0.4		// 0.25 - 0.5
+	AttackDelay = 1.0			// 1.0 - 1.5f
+	Cost = 1
+	Difficulty = EASY+NORMAL
+	VoicePitch = 105
+End
+
+Template Easy
+	Skill = 0
+	Aggression = 20
+	ReactionTime = 0.5		// 0.25 - 0.5
+	AttackDelay = 1.5			// 1.0 - 1.5f
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+End
+
+
+//----------------------------------------------------------------------------
+//
+// Estes são o bot individual perfila de qual herda primeiro  
+// Falta e então o Template(s especificado), em ordem 
+//
+
+Elite+Shotgun Carvalho
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Punch Fenix
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Power Rock
+	Skin = 1
+	VoicePitch = 80
+End
+
+Elite+Punch Tubarao
+	Skin = 3
+	VoicePitch = 90
+End
+
+Elite+Rifle Lobo
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite Atirador
+	Skin = 3
+	VoicePitch = 96
+End
+
+
+Expert+Rifle Arnaldo
+	VoicePitch = 85
+End
+
+Expert+Rifle Bartt
+	VoicePitch = 100
+End
+
+Expert Paulada
+	VoicePitch = 95
+End
+
+Expert+Sniper Kyle
+	Cost = 5
+	VoicePitch = 115
+End
+
+Expert+Shotgun Mongo
+	VoicePitch = 87
+End
+
+Expert+Rifle Tornado
+	VoicePitch = 91
+End
+
+Expert+Rifle Pezao
+	VoicePitch = 101
+End
+
+Expert Teco
+	VoicePitch = 112
+End
+
+Expert+Punch Rasgo
+	VoicePitch = 99
+End
+
+Expert+Rifle Zak
+	VoicePitch = 100
+End
+
+Expert+Rifle Vinny
+	VoicePitch = 86
+End
+
+Expert+Sniper Zed
+	Cost = 5
+	VoicePitch = 105
+End
+
+// VeryHard??
+
+Hard+Rifle Cadin
+	VoicePitch = 95
+End
+
+Hard+Rifle Chefe
+	VoicePitch = 90
+End
+
+Hard+Spray Gabriel
+	VoicePitch = 102
+End
+
+Hard+Shotgun Narigudo
+	VoicePitch = 98
+End
+
+Hard+Rifle Ivan
+	VoicePitch = 96
+End
+
+Hard+Punch Dim
+	VoicePitch = 103
+End
+
+Hard+Punch Joao
+	VoicePitch = 105
+End
+
+Hard+Rifle Jonas
+	VoicePitch = 97
+End
+
+Hard+Rifle Seth
+	VoicePitch = 100
+End
+
+Hard+Rifle Tony
+	VoicePitch = 84
+End
+
+Hard Tyler
+	VoicePitch = 170
+End
+
+Hard+Rifle Victor
+	VoicePitch = 114
+End
+
+Hard+Sniper Vladimir
+	Cost = 4
+	VoicePitch = 97
+End
+
+Hard+Spray Zdane
+	VoicePitch = 90
+End
+
+Hard+Rifle Zim
+	VoicePitch = 110
+End
+
+Tough+Sniper Andre
+	Cost = 3
+	VoicePitch = 105
+End
+
+Tough+Rifle Leonardo
+	VoicePitch = 87
+End
+
+Tough+Rifle Dauton
+	VoicePitch = 95
+End
+
+Tough+Power Fabricio
+	VoicePitch = 110
+End
+
+Tough+Rifle David
+	VoicePitch = 98
+End
+
+Tough Daniel
+	VoicePitch = 100
+End
+
+Tough+Rifle Jordan
+	VoicePitch = 102
+End
+
+Tough+Shotgun Domine
+	VoicePitch = 95
+End
+
+Tough+Rifle Eric
+	VoicePitch = 95
+End
+
+Tough+Rifle Henrique
+	VoicePitch = 110
+End
+
+Tough+Rifle Firmino
+	VoicePitch = 112
+End
+
+Tough Jefersom
+	VoicePitch = 90
+End
+
+Tough+Rifle Kevin
+	VoicePitch = 112
+End
+
+Tough+Spray Quinta
+	VoicePitch = 86
+End
+
+Tough+Rifle Reinaldo
+	VoicePitch = 107
+End
+
+Tough+Rifle Ricardo
+	VoicePitch = 102
+End
+
+Tough Ted
+	VoicePitch = 98
+End
+
+Tough+Rifle Thiago
+	VoicePitch = 97
+End
+
+Tough+Rifle Diney
+	VoicePitch = 95
+End
+
+Tough+Rifle Walace
+	VoicePitch = 86
+End
+
+Tough+Rifle Alexandre
+	VoicePitch = 100
+End
+
+Tough+Rifle Xavier
+	VoicePitch = 95
+End
+
+Normal+Rifle Adam
+	VoicePitch = 105
+End
+
+Normal+Power Cosme
+	VoicePitch = 90
+End
+
+Normal Cristiano
+	VoicePitch = 100
+End
+
+Normal Colin
+	VoicePitch = 107
+End
+
+Normal+Shield Dennis
+	VoicePitch = 104
+End
+
+Normal Douglas
+	VoicePitch = 110
+End
+
+Normal Galo
+	VoicePitch = 95
+End
+
+Normal Grande
+	VoicePitch = 112
+End
+
+Normal Gregorio
+	VoicePitch = 105
+End
+
+Normal+Sniper Ivander
+	Cost = 3
+	VoicePitch = 115
+End
+
+Normal Jerry
+	VoicePitch = 112
+End
+
+Normal Jonas
+	VoicePitch = 96
+End
+
+Normal Bahiano
+	VoicePitch = 98
+End
+
+Normal Marcos
+	VoicePitch = 110
+End
+
+Normal Mateus
+	VoicePitch = 95
+End
+
+Normal+Rifle Mike
+	VoicePitch = 100
+End
+
+Normal Mikael
+	VoicePitch = 90
+End
+
+Normal Paulo
+	VoicePitch = 98
+End
+
+Normal Ze
+	VoicePitch = 105
+End
+
+Normal Esteves
+	VoicePitch = 115
+End
+
+Normal Tom
+	VoicePitch = 110
+End
+
+Normal Weritom
+	VoicePitch = 92
+End
+
+Fair Alfredo
+	VoicePitch = 110
+End
+
+Fair Bily
+	VoicePitch = 100
+End
+
+Fair Bruno
+	VoicePitch = 99
+End
+
+Fair+Spray Calvin
+	VoicePitch = 117
+End
+
+Fair Samuel
+	VoicePitch = 111
+End
+
+Fair Freitas
+	VoicePitch = 98
+End
+
+Fair Rafael
+	VoicePitch = 112
+End
+
+Fair Sergio
+	VoicePitch = 90
+End
+
+Fair Henriques
+	VoicePitch = 111
+End
+
+Fair Ventura
+	VoicePitch = 104
+End
+
+Fair Jason
+	VoicePitch = 116
+End
+
+Fair Jose
+	VoicePitch = 114
+End
+
+Fair Martin
+	VoicePitch = 110
+End
+
+Fair Nicasso
+	VoicePitch = 98
+End
+
+Fair Andersom
+	VoicePitch = 92
+End
+
+Fair Ivam
+	VoicePitch = 113
+End
+
+Fair Mineiro
+	VoicePitch = 114
+End
+
+Fair Pedrim
+	VoicePitch = 115
+End
+
+Fair Ronan
+	VoicePitch = 100
+End
+
+Fair Carioca
+	VoicePitch = 102
+End
+
+Fair Maya
+	VoicePitch = 98
+End
+
+Fair William
+	VoicePitch = 96
+End
+
+Fair Rodney
+	VoicePitch = 94
+End
+
+Easy Alberto
+	VoicePitch = 100
+End
+
+Easy Alladin
+	VoicePitch = 110
+End
+
+Easy Roberto
+	VoicePitch = 104
+End
+
+Easy Tico
+	VoicePitch = 99
+End
+
+Easy Celso
+	VoicePitch = 90
+End
+
+Easy Bicudo
+	VoicePitch = 109
+End
+
+Easy Rangel
+	VoicePitch = 110
+End
+
+Easy Elminho
+	VoicePitch = 100
+End
+
+Easy Erli
+	VoicePitch = 112
+End
+
+Easy Eugenio
+	VoicePitch = 104
+End
+
+Easy Pontes
+	VoicePitch = 99
+End
+
+Easy Pufy
+	VoicePitch = 114
+End
+
+Easy Traira
+	VoicePitch = 89
+End
+
+Easy Manel
+	VoicePitch = 93
+End
+
+Easy Fredy
+	VoicePitch = 116
+End
+
+Easy Jorginho
+	VoicePitch = 115
+End
+
+Easy Paulista
+	VoicePitch = 95
+End
+
+Easy Lamina
+	VoicePitch = 112
+End
+
+Easy Dinaldo
+	VoicePitch = 111
+End
+
+Easy Leandro
+	VoicePitch = 110
+End
+
+Easy Marvin
+	VoicePitch = 109
+End
+
+Easy Nelsom
+	VoicePitch = 108
+End
+
+Easy Miles
+	VoicePitch = 112
+End
+
+Easy Olivera
+	VoicePitch = 115
+End
+
+Easy Petersom
+	VoicePitch = 111
+End
+
+Easy Tobias
+	VoicePitch = 92
+End
+
+Easy Ronin
+	VoicePitch = 100
+End
+
+Easy Cavalo
+	VoicePitch = 102
+End
+
+Easy Medeiros
+	VoicePitch = 104
+End
+
+Easy Waldo
+	VoicePitch = 108
+End
+
+Easy Valentino
+	VoicePitch = 95
+End
+
+Easy Pancado
+	VoicePitch = 100
+End
+
+Easy Wesley
+	VoicePitch = 103
+End
+
+Easy Mauricio
+	VoicePitch = 112
+End
+
+Easy Dalsin
+	VoicePitch = 99
+End
+
+Easy Yuri
+	VoicePitch = 110
+End
+
+
+Elite+Shotgun Adriano
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Punch Adilson
+	Skin = 4
+	VoicePitch = 90
+End
+
+Elite+Power Ailton
+	Skin = 1
+	VoicePitch = 80
+End
+
+Elite+Punch Ayrton
+	Skin = 3
+	VoicePitch = 90
+End
+
+Elite+Rifle Alan
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite Zagalo
+	Skin = 3
+	VoicePitch = 96
+End
+
+
+Expert+Rifle Alessandro
+	VoicePitch = 85
+End
+
+Expert+Rifle Angelo
+	VoicePitch = 100
+End
+
+Expert Anselmo
+	VoicePitch = 95
+End
+
+Expert+Sniper Anibal
+	Cost = 5
+	VoicePitch = 115
+End
+
+Expert+Shotgun Edgar
+	VoicePitch = 87
+End
+
+Expert+Rifle Antonio
+	VoicePitch = 91
+End
+
+Expert+Rifle Tuninho
+	VoicePitch = 101
+End
+
+Expert Bras
+	VoicePitch = 112
+End
+
+Expert+Punch Carlos
+	VoicePitch = 99
+End
+
+Expert+Rifle Celso
+	VoicePitch = 100
+End
+
+Expert+Rifle Andy_bogard
+	VoicePitch = 86
+End
+
+Expert+Sniper Cicero
+	Cost = 5
+	VoicePitch = 105
+End
+
+// VeryHard??
+
+Hard+Rifle Diego
+	VoicePitch = 95
+End
+
+Hard+Rifle Clovis
+	VoicePitch = 90
+End
+
+Hard+Spray Gabriel
+	VoicePitch = 102
+End
+
+Hard+Shotgun Djalma
+	VoicePitch = 98
+End
+
+Hard+Rifle Erasmo
+	VoicePitch = 96
+End
+
+Hard+Punch Edmundo
+	VoicePitch = 103
+End
+
+Hard+Punch Batista
+	VoicePitch = 105
+End
+
+Hard+Rifle Jonas
+	VoicePitch = 97
+End
+
+Hard+Rifle Chico
+	VoicePitch = 100
+End
+
+Hard+Rifle Geraldo
+	VoicePitch = 84
+End
+
+Hard Amador
+	VoicePitch = 115
+End
+
+Hard+Rifle Victor
+	VoicePitch = 104
+End
+
+Hard+Sniper Apolo
+	Cost = 4
+	VoicePitch = 97
+End
+
+Hard+Spray Getulio
+	VoicePitch = 103
+End
+
+Hard+Rifle D_PowerGuido
+	VoicePitch = 116
+End
+
+Tough+Sniper Carmo
+	Cost = 3
+	VoicePitch = 89
+End
+
+Tough+Rifle Gustavo
+	VoicePitch = 100
+End
+
+Tough+Rifle Conrado
+	VoicePitch = 104
+End
+
+Tough+Power Hercules
+	VoicePitch = 110
+End
+
+Tough+Rifle Joarez
+	VoicePitch = 98
+End
+
+Tough Daniel
+	VoicePitch = 100
+End
+
+Tough+Rifle Julio
+	VoicePitch = 102
+End
+
+Tough+Shotgun Jarbas
+	VoicePitch = 95
+End
+
+Tough+Rifle Marcio
+	VoicePitch = 95
+End
+
+Tough+Rifle Oswaldo
+	VoicePitch = 110
+End
+
+Tough+Rifle Otavio
+	VoicePitch = 112
+End
+
+Tough Otavio
+	VoicePitch = 90
+End
+
+Tough+Rifle Mudin
+	VoicePitch = 115
+End
+
+Tough+Spray Nicolau
+	VoicePitch = 93
+End
+
+Tough+Rifle Nilson
+	VoicePitch = 107
+End
+
+Tough+Rifle Veloso
+	VoicePitch = 102
+End
+
+Tough Rui
+	VoicePitch = 98
+End
+
+Tough+Rifle Sebastiao
+	VoicePitch = 100
+End
+
+Tough+Rifle Tadeu
+	VoicePitch = 95
+End
+
+Tough+Rifle Rogerio
+	VoicePitch = 86
+End
+
+Tough+Rifle Abreu
+	VoicePitch = 100
+End
+
+Tough+Rifle Xavier
+	VoicePitch = 95
+End
+
+Normal+Rifle Adam
+	VoicePitch = 105
+End
+
+Normal+Power Vitor
+	VoicePitch = 90
+End
+
+Normal Cristian
+	VoicePitch = 100
+End
+
+Normal Tito
+	VoicePitch = 107
+End
+
+Normal+Shield Valdo
+	VoicePitch = 104
+End
+
+Normal Douglas
+	VoicePitch = 110
+End
+
+Normal Laranjinha
+	VoicePitch = 95
+End
+
+Normal Acerola
+	VoicePitch = 112
+End
+
+Normal Adelfo
+	VoicePitch = 92
+End
+
+Normal+Sniper Ademir
+	Cost = 3
+	VoicePitch = 115
+End
+
+Normal Gerry
+	VoicePitch = 112
+End
+
+Normal Jonatan
+	VoicePitch = 96
+End
+
+Normal Gaucho
+	VoicePitch = 98
+End
+
+Normal Ozama
+	VoicePitch = 110
+End
+
+Normal Bin_Ladem
+	VoicePitch = 95
+End
+
+Normal+Rifle Blanca
+	VoicePitch = 100
+End
+
+Normal Shinryu
+	VoicePitch = 90
+End
+
+Normal Ruan
+	VoicePitch = 98
+End
+
+Normal Adalcir
+	VoicePitch = 105
+End
+
+Normal Esteves
+	VoicePitch = 115
+End
+
+Normal Sadan
+	VoicePitch = 110
+End
+
+Normal Franco
+	VoicePitch = 92
+End
+
+Fair Bromco
+	VoicePitch = 110
+End
+
+Fair Bush
+	VoicePitch = 100
+End
+
+Fair Amogueco
+	VoicePitch = 99
+End
+
+Fair+Spray Skoll
+	VoicePitch = 120
+End
+
+Fair Bhrama
+	VoicePitch = 111
+End
+
+Fair Mouserbear
+	VoicePitch = 98
+End
+
+Fair Kaiser
+	VoicePitch = 112
+End
+
+Fair Antartica
+	VoicePitch = 90
+End
+
+Fair Dose_de_51
+	VoicePitch = 107
+End
+
+Fair Fred_Gruguer
+	VoicePitch = 97
+End
+
+Fair Saca_Rolha
+	VoicePitch = 116
+End
+
+Fair Dreia
+	VoicePitch = 114
+End
+
+Fair Sonofureves
+	VoicePitch = 110
+End
+
+Fair Pit_bicha
+	VoicePitch = 98
+End
+
+Fair Bitoca
+	VoicePitch = 92
+End
+
+Fair Cueca
+	VoicePitch = 113
+End
+
+Fair Calisto
+	VoicePitch = 114
+End
+
+Fair Suker&Fuker
+	VoicePitch = 115
+End
+
+Fair Meleca
+	VoicePitch = 90
+End
+
+Fair Chees_9
+	VoicePitch = 102
+End
+
+Fair Nogueira
+	VoicePitch = 98
+End
+
+Fair Lopes
+	VoicePitch = 96
+End
+
+Fair Da_Silva
+	VoicePitch = 94
+End
+
+Easy Barboza
+	VoicePitch = 100
+End
+
+Easy Guimares
+	VoicePitch = 110
+End
+
+Easy Astrogildo
+	VoicePitch = 120
+End
+
+Easy Tiaum
+	VoicePitch = 99
+End
+
+Easy Pial
+	VoicePitch = 89
+End
+
+Easy Bagre
+	VoicePitch = 108
+End
+
+Easy Pipoca
+	VoicePitch = 110
+End
+
+Easy Careca
+	VoicePitch = 100
+End
+
+Easy Mr.Pipino
+	VoicePitch = 112
+End
+
+Easy Potter
+	VoicePitch = 118
+End
+
+Easy Frodo
+	VoicePitch = 99
+End
+
+Easy Pileque
+	VoicePitch = 111
+End
+
+Easy Joaquim
+	VoicePitch = 97
+End
+
+Easy Machado
+	VoicePitch = 117
+End
+
+Easy JR.
+	VoicePitch = 106
+End
+
+Easy Tumati
+	VoicePitch = 115
+End
+
+Easy Le_Roy
+	VoicePitch = 104
+End
+
+Easy Head_Shoter
+	VoicePitch = 102
+End
+
+Easy 007
+	VoicePitch = 111
+End
+
+Easy James_Bond
+	VoicePitch = 110
+End
+
+Easy Goiabinha
+	VoicePitch = 109
+End
+
+Easy Mariola
+	VoicePitch = 108
+End
+
+Easy Buchada
+	VoicePitch = 102
+End
+
+Easy TATU
+	VoicePitch = 100
+End
+
+Easy Petersom
+	VoicePitch = 125
+End
+
+Easy Tubhyas
+	VoicePitch = 92
+End
+
+Easy Pinochet
+	VoicePitch = 100
+End
+
+Easy Bira
+	VoicePitch = 102
+End
+
+Easy Catatal
+	VoicePitch = 104
+End
+
+Easy Alex
+	VoicePitch = 108
+End
+
+Easy Jabuti
+	VoicePitch = 95
+End
+
+Easy Jonny_Bravo
+	VoicePitch = 100
+End
+
+Easy Don_quixot
+	VoicePitch = 90
+End
+
+Easy Akuma
+	VoicePitch = 112
+End
+
+Easy Conker
+	VoicePitch = 99
+End
+
+Easy Pitfall
+	VoicePitch = 110
+End
+
