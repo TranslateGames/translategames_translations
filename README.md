@@ -1,2 +1,2 @@
-# translategames_translations
-Traduções - Traduções de Jogos
+# Traduções
+*Traduções de Jogos™*
