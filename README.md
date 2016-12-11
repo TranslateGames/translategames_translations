@@ -7,6 +7,6 @@
 - **353** - 18 Wheels of Steel: American Long Haul
 - **354** - 18 Wheels of Steel: Pedal to the Metal
 - **355** - Counter-Strike 1.6
-- **356** - Age of Mythology e Age of Mythology: The Titans Expansion
+- **356** - Age of Mythology® e Age of Mythology®: The Titans Expansion
 - **357** - Warhammer® 40,000™: Dawn of War® II: Retribution™
 - **358** - Warhammer® 40,000™: Dawn of War® II e Chaos Rising™
